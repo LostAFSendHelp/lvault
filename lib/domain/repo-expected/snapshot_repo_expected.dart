@@ -10,4 +10,14 @@ abstract class SnapshotRepoExpected {
     int? from,
     int? to,
   });
+
+  Future<Snapshot> create({
+    required String pocketId,
+    required double balance,
+    required int timestamp,
+  });
+
+  Future<void> delete({required List<String> ids});
+
+  Future<void> deleteByPocketIds({required List<String> pocketIds});
 }

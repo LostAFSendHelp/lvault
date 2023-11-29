@@ -1,4 +1,4 @@
-import 'package:lvault/domain/entities/Pocket.dart';
+import 'package:lvault/domain/entities/pocket.dart';
 import 'package:lvault/domain/repo-expected/pocket_repo_expected.dart';
 
 class UCGetAllPockets {

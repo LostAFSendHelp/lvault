@@ -45,7 +45,7 @@ final class SnapshotDTO {
       pocket_id TEXT NOT NULL,
       balance REAL NOT NULL,
       timestamp INTEGER NOT NULL,
-      FOREIGN KEY(pocket_id) REFERENCES pockets(id)
+      FOREIGN KEY(pocket_id) REFERENCES pockets(id) ON DELETE CASCADE
     )
   ''';
 }
