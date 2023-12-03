@@ -19,11 +19,10 @@ class PocketRepo implements PocketRepoExpected {
   }
 
   @override
-  Future<Pocket> create({required String name, required double balance}) async {
+  Future<Pocket> create({required String name}) async {
     final dto = PocketDTO(
       id: _uuid.v1(),
       name: name,
-      balance: balance,
       createdAt: DateTime.now().millisecondsSinceEpoch,
     );
 
@@ -49,7 +48,7 @@ class PocketRepo implements PocketRepoExpected {
   Future<void> update({required Pocket pocket}) async {
     await _dbService.db.update(
       PocketDTO.tableName,
-      {'name': pocket.name, 'balance': pocket.balance},
+      {'name': pocket.name},
       where: 'id = ?',
       whereArgs: [pocket.id],
     );

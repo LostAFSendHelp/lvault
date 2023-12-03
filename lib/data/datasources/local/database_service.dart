@@ -8,7 +8,7 @@ class DatabaseService {
 
   DatabaseService({String dbName = 'lvault.db'}) : _dbName = dbName;
 
-  void initialize() async {
+  Future<void> initialize() async {
     db = await openDatabase(
         _dbName, // open using relative path to `getDatabasesPath()`
         version: 1,

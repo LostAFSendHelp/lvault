@@ -9,4 +9,8 @@ class UCGetAllPockets {
   Future<List<Pocket>> call() {
     return _repo.getAll();
   }
+
+  Future<Pocket> create({required String name}) {
+    return _repo.create(name: name);
+  }
 }
